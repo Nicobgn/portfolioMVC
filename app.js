@@ -4,8 +4,6 @@ const app = express();
 const PORT = process.env.port || 3000;
 
 const routesMain = require(path.join(__dirname + "/src/routes/main"));
-const routesUser = require(path.join(__dirname + "/src/routes/user"));
-const routesProducts = require(path.join(__dirname + "/src/routes/products"));
 
 //	Settings
 app.set("view engine", "ejs");
@@ -14,8 +12,6 @@ app.use(express.static("public"));
 
 // 	Routes
 app.use("/", routesMain);
-app.use("/user", routesUser);
-app.use("/store", routesProducts);
 
 // 	Middlewares
 app.use((req, res, next) => {
