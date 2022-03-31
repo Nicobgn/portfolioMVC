@@ -3,13 +3,13 @@ const express = require("express");
 const app = express();
 const PORT = process.env.port || 3000;
 
-const routesMain = require(path.join(__dirname + "/routes/main"));
-const routesUser = require(path.join(__dirname + "/routes/user"));
-const routesProducts = require(path.join(__dirname + "/routes/products"));
+const routesMain = require(path.join(__dirname + "/src/routes/main"));
+const routesUser = require(path.join(__dirname + "/src/routes/user"));
+const routesProducts = require(path.join(__dirname + "/src/routes/products"));
 
 //	Settings
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname + "/views/"));
+app.set("views", path.join(__dirname + "/src/views/"));
 app.use(express.static("public"));
 
 // 	Routes
